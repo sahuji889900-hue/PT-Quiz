@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Physiotherapy MCQ Quiz</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #f4f6f8;
+        padding: 20px;
+    }
+    .quiz-container {
+        max-width: 800px;
+        margin: auto;
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1 {
+        text-align: center;
+    }
+    .question {
+        margin-bottom: 20px;
+    }
+    .option {
+        display: block;
+        padding: 10px;
+        margin: 5px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .option:hover {
+        background: #eef;
+    }
+    .correct {
+        background-color: #c8f7c5;
+        border-color: #2ecc71;
+    }
+    .wrong {
+        background-color: #f7c5c5;
+        border-color: #e74c3c;
+    }
+    .answer {
+        margin-top: 5px;
+        font-weight: bold;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="quiz-container">
+<h1>Physiotherapy Practice Quiz</h1>
+
+<div class="question">
+<p><b>1. Standing on toes is an example of which order lever?</b></p>
+<div class="option" onclick="check(this,false)">1st</div>
+<div class="option" onclick="check(this,true)">2nd</div>
+<div class="option" onclick="check(this,false)">3rd</div>
+<div class="option" onclick="check(this,false)">4th</div>
+<div class="answer"></div>
+</div>
+
+<div class="question">
+<p><b>2. Muscle is most efficient in which range?</b></p>
+<div class="option" onclick="check(this,false)">Outer</div>
+<div class="option" onclick="check(this,false)">Outer part of middle</div>
+<div class="option" onclick="check(this,true)">Inner part of middle</div>
+<div class="option" onclick="check(this,false)">Inner</div>
+<div class="answer"></div>
+</div>
+
+<div class="question">
+<p><b>3. Active fixation can be achieved by:</b></p>
+<div class="option" onclick="check(this,true)">Co-contraction of muscles</div>
+<div class="option" onclick="check(this,false)">Straps</div>
+<div class="option" onclick="check(this,false)">Manual pressure</div>
+<div class="option" onclick="check(this,false)">None of the above</div>
+<div class="answer"></div>
+</div>
+
+<div class="question">
+<p><b>4. Low resistance, high repetition exercise improves:</b></p>
+<div class="option" onclick="check(this,false)">Strength</div>
+<div class="option" onclick="check(this,true)">Endurance</div>
+<div class="option" onclick="check(this,false)">Volume</div>
+<div class="option" onclick="check(this,false)">Coordination</div>
+<div class="answer"></div>
+</div>
+
+<div class="question">
+<p><b>5. Frenkel’s exercises are mainly used in:</b></p>
+<div class="option" onclick="check(this,true)">Cerebellar lesion</div>
+<div class="option" onclick="check(this,false)">Spastic paralysis</div>
+<div class="option" onclick="check(this,false)">Flaccid paralysis</div>
+<div class="option" onclick="check(this,false)">Parkinsonism</div>
+<div class="answer"></div>
+</div>
+
+</div>
+
+<script>
+function check(element, isCorrect) {
+    let options = element.parentElement.querySelectorAll('.option');
+    let answerBox = element.parentElement.querySelector('.answer');
+
+    options.forEach(opt => opt.onclick = null);
+
+    if (isCorrect) {
+        element.classList.add('correct');
+        answerBox.innerHTML = "✅ Correct!";
+    } else {
+        element.classList.add('wrong');
+        answerBox.innerHTML = "❌ Wrong answer";
+        options.forEach(opt => {
+            if (opt.getAttribute("onclick")?.includes("true")) {
+                opt.classList.add('correct');
+            }
+        });
+    }
+}
+</script>
+
+</body>
+</html>
