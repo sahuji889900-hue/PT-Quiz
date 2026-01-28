@@ -2,127 +2,697 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Physiotherapy MCQ Quiz</title>
+<title>Physiotherapy MCQ Practice</title>
+
 <style>
-    body {
-        font-family: Arial, sans-serif;
-        background: #f4f6f8;
-        padding: 20px;
-    }
-    .quiz-container {
-        max-width: 800px;
-        margin: auto;
-        background: white;
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    h1 {
-        text-align: center;
-    }
-    .question {
-        margin-bottom: 20px;
-    }
-    .option {
-        display: block;
-        padding: 10px;
-        margin: 5px 0;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        cursor: pointer;
-    }
-    .option:hover {
-        background: #eef;
-    }
-    .correct {
-        background-color: #c8f7c5;
-        border-color: #2ecc71;
-    }
-    .wrong {
-        background-color: #f7c5c5;
-        border-color: #e74c3c;
-    }
-    .answer {
-        margin-top: 5px;
-        font-weight: bold;
-    }
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
+  padding: 20px;
+}
+.quiz-container {
+  max-width: 900px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.question {
+  margin-bottom: 25px;
+}
+.option {
+  padding: 10px;
+  margin: 6px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.option:hover {
+  background: #eef;
+}
+.correct {
+  background: #c8f7c5;
+  border-color: #2ecc71;
+}
+.wrong {
+  background: #f7c5c5;
+  border-color: #e74c3c;
+}
+.answer {
+  margin-top: 5px;
+  font-weight: bold;
+}
+.tag {
+  font-size: 12px;
+  color: #666;
+}
 </style>
 </head>
 
 <body>
 
 <div class="quiz-container">
-<h1>Physiotherapy Practice Quiz</h1>
-
-<div class="question">
-<p><b>1. Standing on toes is an example of which order lever?</b></p>
-<div class="option" onclick="check(this,false)">1st</div>
-<div class="option" onclick="check(this,true)">2nd</div>
-<div class="option" onclick="check(this,false)">3rd</div>
-<div class="option" onclick="check(this,false)">4th</div>
-<div class="answer"></div>
-</div>
-
-<div class="question">
-<p><b>2. Muscle is most efficient in which range?</b></p>
-<div class="option" onclick="check(this,false)">Outer</div>
-<div class="option" onclick="check(this,false)">Outer part of middle</div>
-<div class="option" onclick="check(this,true)">Inner part of middle</div>
-<div class="option" onclick="check(this,false)">Inner</div>
-<div class="answer"></div>
-</div>
-
-<div class="question">
-<p><b>3. Active fixation can be achieved by:</b></p>
-<div class="option" onclick="check(this,true)">Co-contraction of muscles</div>
-<div class="option" onclick="check(this,false)">Straps</div>
-<div class="option" onclick="check(this,false)">Manual pressure</div>
-<div class="option" onclick="check(this,false)">None of the above</div>
-<div class="answer"></div>
-</div>
-
-<div class="question">
-<p><b>4. Low resistance, high repetition exercise improves:</b></p>
-<div class="option" onclick="check(this,false)">Strength</div>
-<div class="option" onclick="check(this,true)">Endurance</div>
-<div class="option" onclick="check(this,false)">Volume</div>
-<div class="option" onclick="check(this,false)">Coordination</div>
-<div class="answer"></div>
-</div>
-
-<div class="question">
-<p><b>5. Frenkel’s exercises are mainly used in:</b></p>
-<div class="option" onclick="check(this,true)">Cerebellar lesion</div>
-<div class="option" onclick="check(this,false)">Spastic paralysis</div>
-<div class="option" onclick="check(this,false)">Flaccid paralysis</div>
-<div class="option" onclick="check(this,false)">Parkinsonism</div>
-<div class="answer"></div>
-</div>
-
+  <h2>Physiotherapy MCQ Practice (Exercise + Electrotherapy)</h2>
+  <p><b>Instructions:</b> Click an option to get instant feedback. Refresh for new questions.</p>
+  <div id="quiz"></div>
 </div>
 
 <script>
-function check(element, isCorrect) {
-    let options = element.parentElement.querySelectorAll('.option');
-    let answerBox = element.parentElement.querySelector('.answer');
 
-    options.forEach(opt => opt.onclick = null);
+  /* ---------- ELECTROTHERAPY ---------- */
+  {
+    q: "Which of the following will prevent electric shock?",
+    options: [
+      "Use of isolated transformer",
+      "High sensitivity core balanced relay",
+      "Keeping patient away from earthed objects",
+      "All of the above"
+    ],
+    answer: 3,
+    topic: "Electrotherapy"
+  },
+  {
+    q: "Russian current is",
+    options: ["Low frequency", "Medium frequency", "High frequency", "None of the above"],
+    answer: 1,
+    topic: "Electrotherapy"
+  },
+  {
+    q: "The unit of capacitance is",
+    options: ["Ampere", "Volt", "Farad", "Ohm"],
+    answer: 2,
+    topic: "Electrotherapy"
+  },
+  {
+    q: "Which current is used for stimulation of innervated muscles?",
+    options: ["Faradic", "Interrupted galvanic", "Galvanic", "TENS"],
+    answer: 0,
+    topic: "Electrotherapy"
+  },
+  {
+    q: "Which is an absolute contraindication for electrical stimulation?",
+    options: ["Pacemaker", "Insensitive skin", "Unconscious patient", "Ischemic heart disease"],
+    answer: 0,
+    topic: "Electrotherapy"
+  },
 
-    if (isCorrect) {
-        element.classList.add('correct');
-        answerBox.innerHTML = "✅ Correct!";
-    } else {
-        element.classList.add('wrong');
-        answerBox.innerHTML = "❌ Wrong answer";
-        options.forEach(opt => {
-            if (opt.getAttribute("onclick")?.includes("true")) {
-                opt.classList.add('correct');
-            }
-        });
-    }
+{
+  q: "Russian current is",
+  options: ["Low frequency", "Medium frequency", "High frequency", "None of the above"],
+  answer: 1,
+  topic: "Electrotherapy"
+},
+{
+  q: "Unit of capacitance is",
+  options: ["Ampere", "Volt", "Farad", "Ohm"],
+  answer: 2,
+  topic: "Electrotherapy"
+},
+{
+  q: "Which current is used for stimulation of innervated muscle?",
+  options: ["Faradic", "Interrupted galvanic", "Galvanic", "TENS"],
+  answer: 0,
+  topic: "Electrotherapy"
+},
+{
+  q: "Which of the following prevents electrical shock?",
+  options: [
+    "Use of isolated transformer",
+    "High sensitivity core balanced relay",
+    "Keeping patient away from earthed objects",
+    "All of the above"
+  ],
+  answer: 3,
+  topic: "Electrotherapy"
+},
+{
+  q: "Which is an absolute contraindication for electrical stimulation?",
+  options: ["Pacemaker", "Insensitive skin", "Unconscious patient", "Ischemic heart disease"],
+  answer: 0,
+  topic: "Electrotherapy"
+},
+{
+  q: "TENS works mainly on the principle of",
+  options: [
+    "Gate control theory",
+    "Endorphin release",
+    "Muscle contraction",
+    "Vasodilatation"
+  ],
+  answer: 0,
+  topic: "Electrotherapy"
+},
+{
+  q: "Medium frequency currents reduce skin resistance due to",
+  options: [
+    "High voltage",
+    "Accommodation",
+    "Capacitive effect",
+    "Thermal effect"
+  ],
+  answer: 2,
+  topic: "Electrotherapy"
+},
+{
+  q: "Surged faradic current is mainly used for",
+  options: [
+    "Muscle strengthening",
+    "Muscle re-education",
+    "Pain relief",
+    "Edema reduction"
+  ],
+  answer: 1,
+  topic: "Electrotherapy"
+},
+{
+  q: "Interrupted galvanic current is used for",
+  options: [
+    "Innervated muscle",
+    "Denervated muscle",
+    "Pain relief",
+    "Edema reduction"
+  ],
+  answer: 1,
+  topic: "Electrotherapy"
+},
+{
+  q: "Which waveform is used in TENS?",
+  options: ["Sinusoidal", "Rectangular", "Triangular", "Saw tooth"],
+  answer: 1,
+  topic: "Electrotherapy"
+},
+
+{
+  q: "The physiological effects of direct current include",
+  options: [
+    "Chemical effects",
+    "Thermal effects",
+    "Mechanical effects",
+    "Magnetic effects"
+  ],
+  answer: 0,
+  topic: "Electrotherapy"
+},
+{
+  q: "Which electrode is smaller in size during galvanic stimulation?",
+  options: ["Active electrode", "Indifferent electrode", "Both same", "Depends on area"],
+  answer: 0,
+  topic: "Electrotherapy"
+},
+{
+  q: "Anodal galvanic stimulation produces",
+  options: ["Sedative effect", "Stimulatory effect", "No effect", "Painful sensation"],
+  answer: 0,
+  topic: "Electrotherapy"
+},
+{
+  q: "Cathodal galvanic stimulation produces",
+  options: ["Sedative effect", "Stimulatory effect", "Analgesic effect", "Vasoconstriction"],
+  answer: 1,
+  topic: "Electrotherapy"
+},
+{
+  q: "Reaction of degeneration is seen in",
+  options: [
+    "Upper motor neuron lesion",
+    "Lower motor neuron lesion",
+    "Myopathy",
+    "Neuropraxia"
+  ],
+  answer: 1,
+  topic: "Electrotherapy"
+},
+{
+  q: "Chronaxie is the minimum time required for",
+  options: [
+    "A stimulus of twice rheobase to excite a tissue",
+    "A maximal stimulus to excite tissue",
+    "A stimulus equal to rheobase",
+    "Accommodation of nerve"
+  ],
+  answer: 0,
+  topic: "Electrotherapy"
+},
+{
+  q: "Rheobase is defined as",
+  options: [
+    "Minimum current to excite a tissue with long duration",
+    "Maximum current needed",
+    "Minimum duration needed",
+    "Time required for excitation"
+  ],
+  answer: 0,
+  topic: "Electrotherapy"
+},
+{
+  q: "Strength–duration curve is used to assess",
+  options: [
+    "Pain threshold",
+    "Muscle power",
+    "Nerve and muscle excitability",
+    "Joint range"
+  ],
+  answer: 2,
+  topic: "Electrotherapy"
+},
+{
+  q: "Faradic current produces muscle contraction by",
+  options: [
+    "Direct muscle stimulation",
+    "Stimulation of sensory nerve",
+    "Stimulation of motor nerve",
+    "Chemical effect"
+  ],
+  answer: 2,
+  topic: "Electrotherapy"
+},
+{
+  q: "Galvanic current differs from faradic current because it is",
+  options: [
+    "Alternating",
+    "Interrupted",
+    "Continuous unidirectional",
+    "Surged"
+  ],
+  answer: 2,
+  topic: "Electrotherapy"
+},
+{
+  q: "Accommodation is defined as",
+  options: [
+    "Increased excitability",
+    "Decreased response to constant stimulus",
+    "Increased muscle tone",
+    "Pain modulation"
+  ],
+  answer: 1,
+  topic: "Electrotherapy"
+},
+{
+  q: "Which current is preferred for denervated muscle?",
+  options: [
+    "Faradic",
+    "Interrupted galvanic",
+    "TENS",
+    "Russian current"
+  ],
+  answer: 1,
+  topic: "Electrotherapy"
+},
+{
+  q: "The polarity which attracts acid radicals is",
+  options: ["Anode", "Cathode", "Both", "None"],
+  answer: 0,
+  topic: "Electrotherapy"
+},
+{
+  q: "Iontophoresis is based on the principle of",
+  options: [
+    "Ohm’s law",
+    "Like charges repel",
+    "Unlike charges attract",
+    "Thermal conduction"
+  ],
+  answer: 1,
+  topic: "Electrotherapy"
+},
+{
+  q: "For iontophoresis, the active electrode should be",
+  options: [
+    "Same polarity as drug",
+    "Opposite polarity of drug",
+    "Indifferent electrode",
+    "Larger electrode"
+  ],
+  answer: 0,
+  topic: "Electrotherapy"
+},
+
+{
+  q: "TENS is primarily used for",
+  options: ["Muscle strengthening", "Pain relief", "Edema reduction", "Muscle re-education"],
+  answer: 1,
+  topic: "Electrotherapy"
+},
+{
+  q: "High frequency TENS produces analgesia mainly by",
+  options: [
+    "Gate control mechanism",
+    "Endorphin release",
+    "Muscle fatigue",
+    "Vasodilatation"
+  ],
+  answer: 0,
+  topic: "Electrotherapy"
+},
+{
+  q: "Low frequency TENS relieves pain by",
+  options: [
+    "Gate control theory",
+    "Endorphin release",
+    "Reducing muscle spasm",
+    "Increasing circulation"
+  ],
+  answer: 1,
+  topic: "Electrotherapy"
+},
+{
+  q: "Interferential therapy works on the principle of",
+  options: [
+    "Summation of currents",
+    "Beat frequency",
+    "Ohm’s law",
+    "Accommodation"
+  ],
+  answer: 1,
+  topic: "Electrotherapy"
+},
+{
+  q: "The carrier frequency used in interferential therapy is usually",
+  options: ["50 Hz", "100 Hz", "1–10 Hz", "4000 Hz"],
+  answer: 3,
+  topic: "Electrotherapy"
+},
+{
+  q: "The main advantage of interferential therapy is",
+  options: [
+    "Superficial effect",
+    "Reduced skin resistance",
+    "Chemical effects",
+    "Localized heating"
+  ],
+  answer: 1,
+  topic: "Electrotherapy"
+},
+{
+  q: "Quadripolar technique in interferential therapy uses",
+  options: [
+    "Two electrodes",
+    "Three electrodes",
+    "Four electrodes",
+    "Six electrodes"
+  ],
+  answer: 2,
+  topic: "Electrotherapy"
+},
+{
+  q: "Ultrasound therapy produces therapeutic effects mainly due to",
+  options: [
+    "Electrical energy",
+    "Mechanical vibration",
+    "Magnetic field",
+    "Light energy"
+  ],
+  answer: 1,
+  topic: "Electrotherapy"
+},
+{
+  q: "Frequency commonly used in therapeutic ultrasound is",
+  options: ["50 Hz", "500 Hz", "1 MHz and 3 MHz", "10 MHz"],
+  answer: 2,
+  topic: "Electrotherapy"
+},
+{
+  q: "Ultrasound at 3 MHz is used for treating",
+  options: [
+    "Deep tissues",
+    "Superficial tissues",
+    "Bone injuries",
+    "Joint deformities"
+  ],
+  answer: 1,
+  topic: "Electrotherapy"
+},
+{
+  q: "Ultrasound gel is used to",
+  options: [
+    "Increase intensity",
+    "Reduce pain",
+    "Improve conduction of sound waves",
+    "Produce heating"
+  ],
+  answer: 2,
+  topic: "Electrotherapy"
+},
+{
+  q: "Standing waves during ultrasound therapy are prevented by",
+  options: [
+    "Increasing intensity",
+    "Keeping the transducer stationary",
+    "Moving the transducer continuously",
+    "Using dry skin"
+  ],
+  answer: 2,
+  topic: "Electrotherapy"
+},
+{
+  q: "Cavitation in ultrasound therapy refers to",
+  options: [
+    "Formation of gas bubbles",
+    "Tissue heating",
+    "Muscle contraction",
+    "Electrical stimulation"
+  ],
+  answer: 0,
+  topic: "Electrotherapy"
+},
+{
+  q: "Stable cavitation is generally considered",
+  options: ["Harmful", "Beneficial", "Painful", "Useless"],
+  answer: 1,
+  topic: "Electrotherapy"
+},
+{
+  q: "A contraindication for ultrasound therapy is",
+  options: [
+    "Muscle spasm",
+    "Tendonitis",
+    "Over growing epiphysis",
+    "Chronic pain"
+  ],
+  answer: 2,
+  topic: "Electrotherapy"
+},
+
+{
+  q: "Shortwave diathermy produces therapeutic effects mainly by",
+  options: [
+    "Electrical stimulation",
+    "Mechanical vibration",
+    "Deep heating of tissues",
+    "Magnetic induction only"
+  ],
+  answer: 2,
+  topic: "Electrotherapy"
+},
+{
+  q: "The frequency used in shortwave diathermy is approximately",
+  options: ["50 Hz", "1 MHz", "13.56 MHz", "300 MHz"],
+  answer: 2,
+  topic: "Electrotherapy"
+},
+{
+  q: "The two methods of application of shortwave diathermy are",
+  options: [
+    "Unipolar and bipolar",
+    "Capacitive and inductive",
+    "Monophasic and biphasic",
+    "Continuous and surged"
+  ],
+  answer: 1,
+  topic: "Electrotherapy"
+},
+{
+  q: "Inductive method of SWD is especially useful for heating",
+  options: [
+    "Superficial tissues",
+    "Adipose tissue",
+    "Muscles and blood",
+    "Skin only"
+  ],
+  answer: 2,
+  topic: "Electrotherapy"
+},
+{
+  q: "Capacitive method of SWD mainly heats",
+  options: [
+    "Muscle tissue",
+    "Bone",
+    "Adipose and superficial tissues",
+    "Joint capsule"
+  ],
+  answer: 2,
+  topic: "Electrotherapy"
+},
+{
+  q: "A contraindication for shortwave diathermy is",
+  options: [
+    "Chronic arthritis",
+    "Metal implants",
+    "Muscle spasm",
+    "Low back pain"
+  ],
+  answer: 1,
+  topic: "Electrotherapy"
+},
+{
+  q: "Microwave diathermy differs from shortwave diathermy because it",
+  options: [
+    "Produces deeper heating",
+    "Uses lower frequency",
+    "Produces more superficial heating",
+    "Has no thermal effect"
+  ],
+  answer: 2,
+  topic: "Electrotherapy"
+},
+{
+  q: "The frequency commonly used in microwave diathermy is",
+  options: ["13.56 MHz", "27.12 MHz", "2450 MHz", "500 kHz"],
+  answer: 2,
+  topic: "Electrotherapy"
+},
+{
+  q: "A major disadvantage of microwave diathermy is",
+  options: [
+    "Poor penetration",
+    "Risk of burns",
+    "No heating effect",
+    "High skin resistance"
+  ],
+  answer: 1,
+  topic: "Electrotherapy"
+},
+{
+  q: "Laser therapy is also known as",
+  options: [
+    "Phototherapy",
+    "Electrotherapy",
+    "Thermotherapy",
+    "Cryotherapy"
+  ],
+  answer: 0,
+  topic: "Electrotherapy"
+},
+{
+  q: "LASER is an acronym for",
+  options: [
+    "Light Amplification by Stimulated Emission of Radiation",
+    "Light Absorption by Stimulated Emission of Radiation",
+    "Laser Amplification by Sound Emission of Radiation",
+    "Light Application by Standard Energy Radiation"
+  ],
+  answer: 0,
+  topic: "Electrotherapy"
+},
+{
+  q: "Low-level laser therapy is mainly used for",
+  options: [
+    "Deep heating",
+    "Pain relief and tissue healing",
+    "Muscle strengthening",
+    "Bone remodeling"
+  ],
+  answer: 1,
+  topic: "Electrotherapy"
+},
+{
+  q: "A contraindication for laser therapy is application over",
+  options: [
+    "Muscle spasm",
+    "Chronic inflammation",
+    "Malignant tumor",
+    "Tendonitis"
+  ],
+  answer: 2,
+  topic: "Electrotherapy"
+},
+{
+  q: "Protective goggles are necessary during laser therapy to prevent",
+  options: [
+    "Skin burns",
+    "Eye damage",
+    "Electrical shock",
+    "Thermal injury"
+  ],
+  answer: 1,
+  topic: "Electrotherapy"
+},
+{
+  q: "The primary safety precaution during electrotherapy is",
+  options: [
+    "High intensity application",
+    "Proper patient positioning",
+    "Checking equipment and patient sensation",
+    "Using maximum dosage"
+  ],
+  answer: 2,
+  topic: "Electrotherapy"
+},
+
+
+
+
+  /* 🔽 ADD MORE QUESTIONS HERE (NO LIMIT) */
+];
+
+/* ==================================
+   SETTINGS
+================================== */
+const QUESTIONS_TO_SHOW = 5;
+
+/* ==================================
+   SHUFFLE FUNCTION
+================================== */
+function shuffle(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
 }
+
+/* ==================================
+   LOAD QUIZ
+================================== */
+shuffle(questionBank);
+const selected = questionBank.slice(0, QUESTIONS_TO_SHOW);
+const quiz = document.getElementById("quiz");
+
+selected.forEach((item, index) => {
+  const qDiv = document.createElement("div");
+  qDiv.className = "question";
+
+  qDiv.innerHTML = `
+    <p><b>${index + 1}. ${item.q}</b></p>
+    <div class="tag">${item.topic}</div>
+  `;
+
+  item.options.forEach((opt, i) => {
+    const optDiv = document.createElement("div");
+    optDiv.className = "option";
+    optDiv.textContent = opt;
+
+    optDiv.onclick = () => {
+      const opts = qDiv.querySelectorAll(".option");
+      opts.forEach(o => o.onclick = null);
+
+      if (i === item.answer) {
+        optDiv.classList.add("correct");
+        qDiv.innerHTML += `<div class="answer">✅ Correct</div>`;
+      } else {
+        optDiv.classList.add("wrong");
+        opts[item.answer].classList.add("correct");
+        qDiv.innerHTML += `<div class="answer">❌ Wrong</div>`;
+      }
+    };
+
+    qDiv.appendChild(optDiv);
+  });
+
+  quiz.appendChild(qDiv);
+});
 </script>
 
 </body>
 </html>
-
