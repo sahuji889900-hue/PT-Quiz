@@ -63,37 +63,706 @@ h2 {
    QUESTION BANK (ADD 100+ HERE)
 =============================== */
 const questionBank = [
-  {
-    q: "Russian current is",
-    options: ["Low frequency", "Medium frequency", "High frequency", "None of the above"],
-    answer: 1
-  },
-  {
-    q: "The unit of capacitance is",
-    options: ["Ampere", "Volt", "Farad", "Ohm"],
-    answer: 2
-  },
-  {
-    q: "Which current is used for stimulation of innervated muscle?",
-    options: ["Faradic", "Interrupted galvanic", "Galvanic", "TENS"],
-    answer: 0
-  },
-  {
-    q: "Which of the following prevents electrical shock?",
-    options: [
-      "Use of isolated transformer",
-      "High sensitivity core balanced relay",
-      "Keeping patient away from earthed objects",
-      "All of the above"
-    ],
-    answer: 3
-  },
-  {
-    q: "Which is an absolute contraindication for electrical stimulation?",
-    options: ["Pacemaker", "Insensitive skin", "Unconscious patient", "Ischemic heart disease"],
-    answer: 0
-  }
-  // 🔽 ADD ALL YOUR QUESTIONS BELOW
+{
+  q: "Russian current is",
+  options: ["Low frequency", "Medium frequency", "High frequency", "None of the above"],
+  answer: 1
+},
+{
+  q: "The unit of capacitance is",
+  options: ["Ampere", "Volt", "Farad", "Ohm"],
+  answer: 2
+},
+{
+  q: "Which current is used for stimulation of innervated muscle?",
+  options: ["Faradic", "Interrupted galvanic", "Galvanic", "TENS"],
+  answer: 0
+},
+{
+  q: "Which of the following will prevent electric shock?",
+  options: [
+    "Use of isolated transformer",
+    "High sensitivity core balanced relay",
+    "Keeping patient away from earthed objects",
+    "All of the above"
+  ],
+  answer: 3
+},
+{
+  q: "Which is an absolute contraindication for electrical stimulation?",
+  options: ["Pacemaker", "Insensitive skin", "Unconscious patient", "Ischemic heart disease"],
+  answer: 0
+},
+{
+  q: "TENS works mainly on the principle of",
+  options: [
+    "Gate control theory",
+    "Endorphin release",
+    "Muscle contraction",
+    "Vasodilatation"
+  ],
+  answer: 0
+},
+{
+  q: "Medium frequency currents reduce skin resistance due to",
+  options: [
+    "High voltage",
+    "Accommodation",
+    "Capacitive effect",
+    "Thermal effect"
+  ],
+  answer: 2
+},
+{
+  q: "Surged faradic current is mainly used for",
+  options: [
+    "Muscle strengthening",
+    "Muscle re-education",
+    "Pain relief",
+    "Edema reduction"
+  ],
+  answer: 1
+},
+{
+  q: "Interrupted galvanic current is used for",
+  options: [
+    "Innervated muscle",
+    "Denervated muscle",
+    "Pain relief",
+    "Edema reduction"
+  ],
+  answer: 1
+},
+{
+  q: "Which waveform is used in TENS?",
+  options: ["Sinusoidal", "Rectangular", "Triangular", "Saw tooth"],
+  answer: 1
+},
+{
+  q: "The physiological effects of direct current include",
+  options: [
+    "Chemical effects",
+    "Thermal effects",
+    "Mechanical effects",
+    "Magnetic effects"
+  ],
+  answer: 0
+},
+{
+  q: "Which electrode is smaller in size during galvanic stimulation?",
+  options: ["Active electrode", "Indifferent electrode", "Both same", "Depends on area"],
+  answer: 0
+},
+{
+  q: "Anodal galvanic stimulation produces",
+  options: ["Sedative effect", "Stimulatory effect", "No effect", "Painful sensation"],
+  answer: 0
+},
+{
+  q: "Cathodal galvanic stimulation produces",
+  options: ["Sedative effect", "Stimulatory effect", "Analgesic effect", "Vasoconstriction"],
+  answer: 1
+},
+{
+  q: "Reaction of degeneration is seen in",
+  options: [
+    "Upper motor neuron lesion",
+    "Lower motor neuron lesion",
+    "Myopathy",
+    "Neuropraxia"
+  ],
+  answer: 1
+},
+{
+  q: "Chronaxie is the minimum time required for",
+  options: [
+    "A stimulus of twice rheobase to excite a tissue",
+    "A maximal stimulus to excite tissue",
+    "A stimulus equal to rheobase",
+    "Accommodation of nerve"
+  ],
+  answer: 0
+},
+{
+  q: "Rheobase is defined as",
+  options: [
+    "Minimum current to excite a tissue with long duration",
+    "Maximum current needed",
+    "Minimum duration needed",
+    "Time required for excitation"
+  ],
+  answer: 0
+},
+{
+  q: "Strength–duration curve is used to assess",
+  options: [
+    "Pain threshold",
+    "Muscle power",
+    "Nerve and muscle excitability",
+    "Joint range"
+  ],
+  answer: 2
+},
+{
+  q: "Faradic current produces muscle contraction by",
+  options: [
+    "Direct muscle stimulation",
+    "Stimulation of sensory nerve",
+    "Stimulation of motor nerve",
+    "Chemical effect"
+  ],
+  answer: 2
+},
+{
+  q: "Galvanic current differs from faradic current because it is",
+  options: [
+    "Alternating",
+    "Interrupted",
+    "Continuous unidirectional",
+    "Surged"
+  ],
+  answer: 2
+}
+{
+  q: "Russian current is",
+  options: ["Low frequency", "Medium frequency", "High frequency", "None of the above"],
+  answer: 1
+},
+{
+  q: "The unit of capacitance is",
+  options: ["Ampere", "Volt", "Farad", "Ohm"],
+  answer: 2
+},
+{
+  q: "Which current is used for stimulation of innervated muscle?",
+  options: ["Faradic", "Interrupted galvanic", "Galvanic", "TENS"],
+  answer: 0
+},
+{
+  q: "Which of the following will prevent electric shock?",
+  options: [
+    "Use of isolated transformer",
+    "High sensitivity core balanced relay",
+    "Keeping patient away from earthed objects",
+    "All of the above"
+  ],
+  answer: 3
+},
+{
+  q: "Which is an absolute contraindication for electrical stimulation?",
+  options: ["Pacemaker", "Insensitive skin", "Unconscious patient", "Ischemic heart disease"],
+  answer: 0
+},
+{
+  q: "TENS works mainly on the principle of",
+  options: [
+    "Gate control theory",
+    "Endorphin release",
+    "Muscle contraction",
+    "Vasodilatation"
+  ],
+  answer: 0
+},
+{
+  q: "Medium frequency currents reduce skin resistance due to",
+  options: [
+    "High voltage",
+    "Accommodation",
+    "Capacitive effect",
+    "Thermal effect"
+  ],
+  answer: 2
+},
+{
+  q: "Surged faradic current is mainly used for",
+  options: [
+    "Muscle strengthening",
+    "Muscle re-education",
+    "Pain relief",
+    "Edema reduction"
+  ],
+  answer: 1
+},
+{
+  q: "Interrupted galvanic current is used for",
+  options: [
+    "Innervated muscle",
+    "Denervated muscle",
+    "Pain relief",
+    "Edema reduction"
+  ],
+  answer: 1
+},
+{
+  q: "Which waveform is used in TENS?",
+  options: ["Sinusoidal", "Rectangular", "Triangular", "Saw tooth"],
+  answer: 1
+},
+{
+  q: "The physiological effects of direct current include",
+  options: [
+    "Chemical effects",
+    "Thermal effects",
+    "Mechanical effects",
+    "Magnetic effects"
+  ],
+  answer: 0
+},
+{
+  q: "Which electrode is smaller in size during galvanic stimulation?",
+  options: ["Active electrode", "Indifferent electrode", "Both same", "Depends on area"],
+  answer: 0
+},
+{
+  q: "Anodal galvanic stimulation produces",
+  options: ["Sedative effect", "Stimulatory effect", "No effect", "Painful sensation"],
+  answer: 0
+},
+{
+  q: "Cathodal galvanic stimulation produces",
+  options: ["Sedative effect", "Stimulatory effect", "Analgesic effect", "Vasoconstriction"],
+  answer: 1
+},
+{
+  q: "Reaction of degeneration is seen in",
+  options: [
+    "Upper motor neuron lesion",
+    "Lower motor neuron lesion",
+    "Myopathy",
+    "Neuropraxia"
+  ],
+  answer: 1
+},
+{
+  q: "Chronaxie is the minimum time required for",
+  options: [
+    "A stimulus of twice rheobase to excite a tissue",
+    "A maximal stimulus to excite tissue",
+    "A stimulus equal to rheobase",
+    "Accommodation of nerve"
+  ],
+  answer: 0
+},
+{
+  q: "Rheobase is defined as",
+  options: [
+    "Minimum current to excite a tissue with long duration",
+    "Maximum current needed",
+    "Minimum duration needed",
+    "Time required for excitation"
+  ],
+  answer: 0
+},
+{
+  q: "Strength–duration curve is used to assess",
+  options: [
+    "Pain threshold",
+    "Muscle power",
+    "Nerve and muscle excitability",
+    "Joint range"
+  ],
+  answer: 2
+},
+{
+  q: "Faradic current produces muscle contraction by",
+  options: [
+    "Direct muscle stimulation",
+    "Stimulation of sensory nerve",
+    "Stimulation of motor nerve",
+    "Chemical effect"
+  ],
+  answer: 2
+},
+{
+  q: "Galvanic current differs from faradic current because it is",
+  options: [
+    "Alternating",
+    "Interrupted",
+    "Continuous unidirectional",
+    "Surged"
+  ],
+  answer: 2
+},
+{
+  q: "Accommodation is defined as",
+  options: [
+    "Increased excitability of nerve",
+    "Decreased response to a constant stimulus",
+    "Increased muscle tone",
+    "Pain modulation"
+  ],
+  answer: 1
+},
+{
+  q: "Which current is preferred for denervated muscle?",
+  options: [
+    "Faradic current",
+    "Interrupted galvanic current",
+    "TENS",
+    "Russian current"
+  ],
+  answer: 1
+},
+{
+  q: "The polarity which attracts acid radicals is",
+  options: ["Anode", "Cathode", "Both", "None"],
+  answer: 0
+},
+{
+  q: "Iontophoresis is based on the principle of",
+  options: [
+    "Ohm’s law",
+    "Like charges repel",
+    "Unlike charges attract",
+    "Thermal conduction"
+  ],
+  answer: 1
+},
+{
+  q: "For iontophoresis, the active electrode should be",
+  options: [
+    "Same polarity as the drug",
+    "Opposite polarity of the drug",
+    "Indifferent electrode",
+    "Larger electrode"
+  ],
+  answer: 0
+},
+{
+  q: "Iontophoresis is most useful for delivering",
+  options: [
+    "Large molecular weight drugs",
+    "Protein based drugs",
+    "Ionized drugs",
+    "Gaseous substances"
+  ],
+  answer: 2
+},
+{
+  q: "Which current is commonly used for pain relief?",
+  options: [
+    "Faradic current",
+    "Interrupted galvanic current",
+    "TENS",
+    "Russian current"
+  ],
+  answer: 2
+},
+{
+  q: "The primary aim of electrical stimulation in denervated muscle is",
+  options: [
+    "Increase muscle power",
+    "Prevent muscle atrophy",
+    "Relieve pain",
+    "Improve circulation"
+  ],
+  answer: 1
+},
+{
+  q: "Strength–duration curve in denervated muscle shows",
+  options: [
+    "Left shift",
+    "Right shift",
+    "No change",
+    "Vertical line"
+  ],
+  answer: 1
+},
+{
+  q: "Chronaxie in denervated muscle is",
+  options: [
+    "Decreased",
+    "Increased",
+    "Unchanged",
+    "Zero"
+  ],
+  answer: 1
+},
+{
+  q: "Faradic current is contraindicated in",
+  options: [
+    "Lower motor neuron lesion",
+    "Upper motor neuron lesion",
+    "Muscle weakness",
+    "Post-operative cases"
+  ],
+  answer: 0
+},
+{
+  q: "Interrupted galvanic current produces muscle contraction by",
+  options: [
+    "Direct muscle stimulation",
+    "Motor nerve stimulation",
+    "Sensory nerve stimulation",
+    "Reflex action"
+  ],
+  answer: 0
+},
+{
+  q: "Which electrode is usually larger during galvanic stimulation?",
+  options: [
+    "Active electrode",
+    "Indifferent electrode",
+    "Both equal",
+    "Depends on current"
+  ],
+  answer: 1
+},
+{
+  q: "Cathodal stimulation generally produces",
+  options: [
+    "Sedative effect",
+    "Increased excitability",
+    "No physiological effect",
+    "Vasoconstriction"
+  ],
+  answer: 1
+},
+{
+  q: "Anodal stimulation generally produces",
+  options: [
+    "Increased excitability",
+    "Sedative effect",
+    "Muscle fatigue",
+    "Painful sensation"
+  ],
+  answer: 1
+},
+{
+  q: "Which current is best suited for muscle re-education?",
+  options: [
+    "Faradic current",
+    "Interrupted galvanic current",
+    "TENS",
+    "IFT"
+  ],
+  answer: 0
+},
+{
+  q: "The main disadvantage of galvanic current is",
+  options: [
+    "Risk of skin irritation",
+    "Poor muscle contraction",
+    "No chemical effect",
+    "High frequency"
+  ],
+  answer: 0
+},
+{
+  q: "In electrical stimulation, skin resistance is lowest with",
+  options: [
+    "Dry electrodes",
+    "Poor contact",
+    "Warm, moist skin",
+    "Small electrodes"
+  ],
+  answer: 2
+},
+{
+  q: "Which factor increases skin resistance during electrotherapy?",
+  options: [
+    "Moist skin",
+    "Large electrodes",
+    "High frequency current",
+    "Dry skin"
+  ],
+  answer: 3
+},
+{
+  q: "The main purpose of using a coupling medium in electrotherapy is to",
+  options: [
+    "Increase intensity",
+    "Reduce pain",
+    "Reduce skin resistance",
+    "Produce heating"
+  ],
+  answer: 2
+},
+{
+  q: "TENS is primarily used for",
+  options: ["Muscle strengthening", "Pain relief", "Edema reduction", "Muscle re-education"],
+  answer: 1
+},
+{
+  q: "High frequency TENS produces analgesia mainly by",
+  options: [
+    "Gate control mechanism",
+    "Endorphin release",
+    "Muscle fatigue",
+    "Vasodilatation"
+  ],
+  answer: 0
+},
+{
+  q: "Low frequency TENS relieves pain by",
+  options: [
+    "Gate control theory",
+    "Endorphin release",
+    "Reducing muscle spasm",
+    "Increasing circulation"
+  ],
+  answer: 1
+},
+{
+  q: "Interferential therapy works on the principle of",
+  options: [
+    "Summation of currents",
+    "Beat frequency",
+    "Ohm’s law",
+    "Accommodation"
+  ],
+  answer: 1
+},
+{
+  q: "The carrier frequency used in interferential therapy is usually",
+  options: ["50 Hz", "100 Hz", "1–10 Hz", "4000 Hz"],
+  answer: 3
+},
+{
+  q: "The main advantage of interferential therapy is",
+  options: [
+    "Superficial effect",
+    "Reduced skin resistance",
+    "Chemical effects",
+    "Localized heating"
+  ],
+  answer: 1
+},
+{
+  q: "Quadripolar technique in interferential therapy uses",
+  options: [
+    "Two electrodes",
+    "Three electrodes",
+    "Four electrodes",
+    "Six electrodes"
+  ],
+  answer: 2
+},
+{
+  q: "Bipolar technique in interferential therapy uses",
+  options: [
+    "One electrode",
+    "Two electrodes",
+    "Four electrodes",
+    "Six electrodes"
+  ],
+  answer: 1
+},
+{
+  q: "The beat frequency in interferential therapy is usually set between",
+  options: [
+    "1–10 Hz",
+    "10–50 Hz",
+    "50–100 Hz",
+    "100–200 Hz"
+  ],
+  answer: 2
+},
+{
+  q: "Interferential therapy is contraindicated in patients with",
+  options: [
+    "Muscle spasm",
+    "Joint stiffness",
+    "Pacemaker",
+    "Chronic pain"
+  ],
+  answer: 2
+},
+{
+  q: "Ultrasound therapy produces therapeutic effects mainly due to",
+  options: [
+    "Electrical energy",
+    "Mechanical vibration",
+    "Magnetic field",
+    "Light energy"
+  ],
+  answer: 1
+},
+{
+  q: "The frequencies commonly used in therapeutic ultrasound are",
+  options: [
+    "100 kHz and 500 kHz",
+    "500 kHz and 800 kHz",
+    "1 MHz and 3 MHz",
+    "5 MHz and 10 MHz"
+  ],
+  answer: 2
+},
+{
+  q: "Ultrasound at 3 MHz is mainly used for treating",
+  options: [
+    "Deep tissues",
+    "Superficial tissues",
+    "Bone injuries",
+    "Joint deformities"
+  ],
+  answer: 1
+},
+{
+  q: "Ultrasound coupling medium is used to",
+  options: [
+    "Increase intensity",
+    "Reduce pain",
+    "Improve transmission of sound waves",
+    "Produce thermal effect"
+  ],
+  answer: 2
+},
+{
+  q: "Standing waves during ultrasound therapy are prevented by",
+  options: [
+    "Increasing intensity",
+    "Keeping the transducer stationary",
+    "Moving the transducer continuously",
+    "Using dry skin"
+  ],
+  answer: 2
+},
+{
+  q: "Cavitation in ultrasound therapy refers to",
+  options: [
+    "Formation of gas bubbles",
+    "Tissue heating",
+    "Muscle contraction",
+    "Electrical stimulation"
+  ],
+  answer: 0
+},
+{
+  q: "Stable cavitation in ultrasound therapy is generally considered",
+  options: ["Harmful", "Beneficial", "Painful", "Useless"],
+  answer: 1
+},
+{
+  q: "A contraindication for ultrasound therapy is application over",
+  options: [
+    "Muscle spasm",
+    "Tendonitis",
+    "Over growing epiphysis",
+    "Chronic pain"
+  ],
+  answer: 2
+},
+{
+  q: "Continuous mode of ultrasound is mainly used for",
+  options: [
+    "Acute inflammation",
+    "Thermal effects",
+    "Pain modulation only",
+    "Edema reduction"
+  ],
+  answer: 1
+},
+{
+  q: "Pulsed mode of ultrasound is preferred in",
+  options: [
+    "Chronic conditions",
+    "Acute inflammatory conditions",
+    "Joint contractures",
+    "Fibrosis"
+  ],
+  answer: 1
+}    
 ];
 
 /* ===============================
@@ -153,3 +822,4 @@ function check(element, isCorrect) {
 
 </body>
 </html>
+
