@@ -58,8 +58,7 @@ h2 {
 <div id="quiz"></div>
 </div>
 
-<script>
-fetch("https://script.google.com/macros/s/AKfycby265_GpGGhqoq7PiK5cXHJxTvebhXcY-JJIvWBzW5mcnWqO8A8I_KFajGLbL0Rxb0_yQ/exec"):  
+<script> 
 /* ===============================
    QUESTION BANK (ADD 100+ HERE)
 =============================== */
@@ -1461,9 +1460,14 @@ function check(element, isCorrect) {
     });
   }
 }
+// 3️⃣ LOGGER (LAST, NON-BLOCKING)
+try {
+  fetch("https://script.google.com/macros/s/XXXXXXXX/exec", { mode: "no-cors" });
+} catch (e) {}  
 </script>
 </body>
 </html>
+
 
 
 
