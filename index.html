@@ -771,7 +771,7 @@ const questionBank = [
 const QUESTIONS_TO_SHOW = 5;
 
 /* ===============================
-   SHUFFLE FUNCTION
+   SHUFFLE (SAFE – NO MUTATION)
 =============================== */
 function shuffle(array) {
   for (let i = array.length - 1; i > 0; i--) {
@@ -780,18 +780,25 @@ function shuffle(array) {
   }
 }
 
-/* ✅ SAFE SHUFFLE */
-const shuffled = [...questionBank];
+/* ===============================
+   LOAD QUIZ (SAFE VERSION)
+=============================== */
+const shuffled = [...questionBank];   // ✅ COPY, do NOT mutate original
 shuffle(shuffled);
-const selected = shuffled.slice(0, QUESTIONS_TO_SHOW);
 
+const selected = shuffled.slice(0, QUESTIONS_TO_SHOW);
 const quiz = document.getElementById("quiz");
 
 selected.forEach((item, index) => {
-  let html = `<div class="question"><p><b>${index + 1}. ${item.q}</b></p>`;
+  let html = `
+    <div class="question">
+      <p><b>${index + 1}. ${item.q}</b></p>
+  `;
+
   item.options.forEach((opt, i) => {
     html += `<div class="option" onclick="check(this, ${i === item.answer})">${opt}</div>`;
   });
+
   html += `<div class="answer"></div></div>`;
   quiz.innerHTML += html;
 });
@@ -819,8 +826,8 @@ function check(element, isCorrect) {
   }
 }
 </script>
-
 </body>
 </html>
+
 
 
