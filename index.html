@@ -780,11 +780,11 @@ function shuffle(array) {
   }
 }
 
-/* ===============================
-   LOAD QUIZ
-=============================== */
-shuffle(questionBank);
-const selected = questionBank.slice(0, QUESTIONS_TO_SHOW);
+/* ✅ SAFE SHUFFLE */
+const shuffled = [...questionBank];
+shuffle(shuffled);
+const selected = shuffled.slice(0, QUESTIONS_TO_SHOW);
+
 const quiz = document.getElementById("quiz");
 
 selected.forEach((item, index) => {
@@ -822,4 +822,5 @@ function check(element, isCorrect) {
 
 </body>
 </html>
+
 
