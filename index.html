@@ -1398,7 +1398,6 @@ const questionBank = [
   ],
   answer: 1
 }
-fetch("https://script.google.com/macros/s/AKfycby265_GpGGhqoq7PiK5cXHJxTvebhXcY-JJIvWBzW5mcnWqO8A8I_KFajGLbL0Rxb0_yQ/exec");
 ];
 
 /* ===============================
@@ -1461,10 +1460,15 @@ function check(element, isCorrect) {
     });
   }
 }
- 
+setTimeout(() => {
+  try {
+    fetch("PASTE_YOUR_GOOGLE_SCRIPT_URL_HERE", { mode: "no-cors" });
+  } catch (e) {}
+}, 500); 
 </script>
 </body>
 </html>
+
 
 
 
